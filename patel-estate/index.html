@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="Discover homes, apartments and commercial properties with Patel Estate. Find your next property with confidence.">
+  <title>Patel Estate | Find Your Place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header" id="top">
+    <nav class="navbar container">
+      <a href="#top" class="brand" aria-label="Patel Estate home">
+        <span class="brand-name">PATEL <strong>ESTATE</strong><small>PROPERTY & LIFESTYLE</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#properties">Properties</a>
+        <a href="#about">About us</a>
+        <a href="#services">Our services</a>
+        <a href="#contact" class="nav-cta">Contact us <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="eyebrow light-eyebrow"><span></span> YOUR NEXT CHAPTER STARTS HERE</span>
+        <h1>Find a place<br>to call <em>home.</em></h1>
+        <p>Thoughtfully selected properties. Trusted guidance.<br class="desktop-only"> A better way to find your perfect place.</p>
+        <a href="#properties" class="button button-primary">Explore properties <span>↗</span></a>
+
+        <div class="hero-note">
+          <span class="hero-note-icon">⌂</span>
+          <span>Find your space.<br><strong>Make it yours.</strong></span>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>HOMES · APARTMENTS · COMMERCIAL</span>
+        <a href="#properties">SCROLL TO EXPLORE ↓</a>
+      </div>
+    </section>
+
+    <section class="search-section container" aria-label="Search properties">
+      <div class="search-heading">
+        <span class="eyebrow">PROPERTY FINDER</span>
+        <h2>Your search starts here.</h2>
+      </div>
+
+      <form id="searchForm" class="search-panel">
+        <label class="search-field">
+          <span>I'm looking to</span>
+          <select id="purpose">
+            <option value="all">Buy or rent</option>
+            <option value="sale">Buy a property</option>
+            <option value="rent">Rent a property</option>
+          </select>
+        </label>
+        <label class="search-field">
+          <span>Location</span>
+          <input id="location" type="search" placeholder="City or neighbourhood">
+        </label>
+        <label class="search-field">
+          <span>Property type</span>
+          <select id="propertyType">
+            <option value="all">All properties</option>
+            <option value="house">House / Villa</option>
+            <option value="apartment">Apartment</option>
+            <option value="commercial">Commercial</option>
+          </select>
+        </label>
+        <button class="button search-button" type="submit">
+          <span>⌕</span> Search
+        </button>
+      </form>
+    </section>
+
+    <section class="section container" id="properties">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">A PLACE FOR EVERY STORY</span>
+          <h2>Featured properties<span class="green-dot">.</span></h2>
+          <p>Explore spaces chosen with you in mind.</p>
+        </div>
+        <a class="text-link" href="#properties" id="resetFilters">View all properties ↗</a>
+      </div>
+
+      <div class="filter-row" aria-label="Quick property filters">
+        <button class="filter-chip active" data-filter="all">All properties</button>
+        <button class="filter-chip" data-filter="sale">For sale</button>
+        <button class="filter-chip" data-filter="rent">For rent</button>
+      </div>
+
+      <p id="resultsCount" class="results-count" aria-live="polite"></p>
+      <div class="property-grid" id="propertyGrid"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <span>⌂</span>
+        <h3>No matching properties yet</h3>
+        <p>Try a different location or adjust your filters.</p>
+        <button class="button button-dark" id="clearSearch" type="button">Clear filters</button>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Contemporary home with an inviting, light-filled interior" loading="lazy">
+          <div class="image-caption"><span>⌂</span><div><strong>A place that feels right.</strong><small>More than just four walls.</small></div></div>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">THE PATEL ESTATE DIFFERENCE</span>
+          <h2>Property decisions,<br>made <em>personal.</em></h2>
+          <p>Finding the right property is about more than price and location. It is about your plans, your priorities and the life you want to build.</p>
+          <p>At Patel Estate, we aim to make the journey clearer, simpler and more personal—from your first search to your next big move.</p>
+          <div class="about-points">
+            <div><span>01</span><strong>People first</strong><small>Your needs guide the search.</small></div>
+            <div><span>02</span><strong>Clear guidance</strong><small>Information to help you decide.</small></div>
+            <div><span>03</span><strong>Every step</strong><small>Support throughout your journey.</small></div>
+          </div>
+          <a href="#contact" class="button button-dark">Let's talk about property ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section container" id="services">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">HOW WE CAN HELP</span>
+          <h2>Real estate, made simpler<span class="green-dot">.</span></h2>
+          <p>Practical support for every kind of move.</p>
+        </div>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon">⌂</span><span class="service-number">01</span>
+          <h3>Buying a property</h3>
+          <p>Explore suitable homes and compare your options with confidence.</p>
+          <a href="#contact" class="text-link">Find your property ↗</a>
+        </article>
+        <article class="service-card">
+          <span class="service-icon">↗</span><span class="service-number">02</span>
+          <h3>Renting a home</h3>
+          <p>Discover rental options that fit your lifestyle and budget.</p>
+          <a href="#contact" class="text-link">Explore rentals ↗</a>
+        </article>
+        <article class="service-card">
+          <span class="service-icon">▦</span><span class="service-number">03</span>
+          <h3>Selling property</h3>
+          <p>Connect with prospective buyers and present your property clearly.</p>
+          <a href="#contact" class="text-link">Discuss selling ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow light-eyebrow">LET'S FIND YOUR PLACE</span>
+          <h2>Your next move<br>starts with a <em>hello.</em></h2>
+          <p>Tell us what you're looking for. We'll help you take the next step.</p>
+          <div class="contact-detail"><span>✉</span><div><small>EMAIL US</small><strong id="contactEmail">hello@patelestate.example</strong></div></div>
+          <div class="contact-detail"><span>☎</span><div><small>CALL / WHATSAPP</small><strong id="contactPhone">Add your phone number</strong></div></div>
+          <p class="contact-hint">Replace the sample contact details with your real business information.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3>Tell us what you need</h3>
+          <p>Fill in your details to prepare an enquiry.</p>
+          <label>Your name<input type="text" id="contactName" name="name" placeholder="Full name" required maxlength="100"></label>
+          <label>Email address<input type="email" id="contactUserEmail" name="email" placeholder="you@example.com" required maxlength="150"></label>
+          <label>I'm interested in
+            <select id="contactInterest" name="interest">
+              <option>Buying a property</option>
+              <option>Renting a property</option>
+              <option>Selling a property</option>
+              <option>Commercial property</option>
+              <option>General enquiry</option>
+            </select>
+          </label>
+          <label>Message<textarea id="contactMessage" name="message" placeholder="Tell us about your ideal property..." rows="3" required maxlength="1500"></textarea></label>
+          <button class="button button-primary form-submit" type="submit">Prepare my enquiry ↗</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+          <small class="form-note">Demo form: it opens your email app. No information is stored on this website.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <a href="#top" class="brand footer-brand">
+        <span class="brand-mark">P<span>E</span></span>
+        <span class="brand-name">PATEL <strong>ESTATE</strong><small>PROPERTY & LIFESTYLE</small></span>
+      </a>
+      <p>Finding places. Creating possibilities.</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Patel Estate. All rights reserved.</span>
+      <span>Designed for your next chapter.</span>
+    </div>
+  </footer>
+
+  <dialog class="property-dialog" id="propertyDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close property details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+</body>
+</html>
